@@ -77,7 +77,7 @@ const bmiStatus = {
 // BMI 判斷
 function BMI(item) {
   switch (true) {
-    case item.bmi < 18.5:
+    case item.bmi > 0 && item.bmi < 18.5:
       return item.body = 'slight';
       break;
     case item.bmi >= 18.5 && item.bmi < 24:
@@ -92,7 +92,7 @@ function BMI(item) {
     case item.bmi >= 30 && item.bmi < 35:
       return item.body = 'moderate';
       break;
-    case item.bmi >= 35:
+    case item.bmi >= 35 && item.bmi < 100:
       return item.body = 'severe';
       break;
     default:
@@ -204,16 +204,16 @@ bmiRef.orderByChild('timestamp').on('value', function(snapshot) {
     `;
   }
   bmiList.innerHTML = str;
+
+  // 清空表單
+  height.value = '';
+  weight.value = '';
 })
 
 // 點擊 reply 按鈕
 function replyData(e) {
   e.preventDefault();
   if (e.target.nodeName == 'A' || e.target.parentNode.nodeName == 'A' || e.target.className == 'reply') {
-
-    // 清空表單
-    height.value = '';
-    weight.value = '';
     
     // 修改 calculator-result 樣式
     // resultBtn
