@@ -306,7 +306,6 @@ button {
 // modal
 .modal {
   display: none;
-  // display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -319,6 +318,9 @@ button {
 .modal-content {
   min-width: 500px;
   background-color: $color-white;
+  @media (max-width: 767px) {
+    min-width: 300px;
+  }
 }
 .modal-header {
   padding: 16px;
