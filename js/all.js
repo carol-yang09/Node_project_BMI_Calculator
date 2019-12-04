@@ -81,7 +81,7 @@ function BMI(item) {
       return item.body = 'slight';
       break;
     case item.bmi >= 18.5 && item.bmi < 24:
-      item.body = 'normal';
+      return item.body = 'normal';
       break;
     case item.bmi >= 24 && item.bmi < 27:
       return item.body = 'overweight';
@@ -178,24 +178,24 @@ bmiRef.orderByChild('timestamp').on('value', function(snapshot) {
     // 字串
     str += `
       <ul class="list">
-        <li class="list-border" style="background-color:${itemVal.bmiColor}; box-shadow: 2px 0 3px 0 ${itemVal.bmiShadow}"></li>
-        <li>${itemVal.bmiStatus}</li>
-        <li>
+        <li class="list-item list-border" style="background-color:${itemVal.bmiColor}; box-shadow: 2px 0 3px 0 ${itemVal.bmiShadow}"></li>
+        <li class="list-item">${itemVal.bmiStatus}</li>
+        <li class="list-item">
           <small>BMI</small>
           ${itemVal.bmi}
         </li>
-        <li>
+        <li class="list-item">
           <small>weight</small>
           ${itemVal.weight}
         </li>
-        <li>
+        <li class="list-item">
           <small>height</small>
           ${itemVal.height}
         </li>
-        <li>
+        <li class="list-item">
           <small>${time}</small>
         </li>
-        <li>
+        <li class="list-item">
           <a href="#" class="del-btn">
             <i class="fas fa-trash-alt" data-index=${arr[item].key}></i>
           </a>
