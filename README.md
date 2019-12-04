@@ -20,6 +20,12 @@ https://carol-yang09.github.io/Node_project_BMI_Calculator/index.html
 
 [![bmi-modal.png](https://i.postimg.cc/Z52QfLM2/bmi-modal.png)](https://postimg.cc/jD6v2yK4)
 
+* 響應式
+
+[![bmi-rwd.png](https://i.postimg.cc/nh6k4pF7/bmi-rwd.png)](https://postimg.cc/ZWxpZkyK)
+
+[![bmi-modal-rwd.png](https://i.postimg.cc/W1D8qhvT/bmi-modal-rwd.png)](https://postimg.cc/JsLZ9702)
+
 ## 技術
 * Firebase
 * 純 JavaScript
